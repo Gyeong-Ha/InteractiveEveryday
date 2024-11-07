@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Excel-like Web Page</title>
+  <style>
+    /* Basic Styling */
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      margin-top: 50px;
+    }
+    .toolbar, .grid-container {
+      background-color: #F3F3F3;
+      border: 1px solid #D3D3D3;
+      padding: 10px;
+    }
+    /* Toolbar Styling */
+    .toolbar {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      width: 1000px;
+      padding-bottom: 10px;
+    }
+    .toolbar button, .toolbar select, .toolbar input {
+      margin: 5px;
+    }
+    /* Grid Styling */
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(12, 80px);
+      grid-template-rows: 40px repeat(20, 30px);
+      width: 1000px;
+      border: 1px solid #D3D3D3;
+    }
+    .grid-container div {
+      border: 1px solid #D3D3D3;
+      padding: 5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 14px;
+      cursor: text;
+    }
+    .header {
+      background-color: #E5E5E5;
+      font-weight: bold;
+    }
+    .cell {
+      background-color: #FFFFFF;
+    }
+    .cell:focus {
+      outline: 2px solid #4A90E2;
+    }
+  </style>
+</head>
+<body>
+
+<div>
+  <!-- Toolbar -->
+  <div class="toolbar">
+    <button>파일</button>
+    <button>홈</button>
+    <button>삽입</button>
+    <button>그리기</button>
+    <button>페이지 레이아웃</button>
+    <button>수식</button>
+    <button>데이터</button>
+    <button>검토</button>
+    <button>보기</button>
+    <button>자동화</button>
+    <input type="text" placeholder="검색" style="width: 150px;">
+  </div>
+
+  <!-- Excel-like Grid -->
+  <div class="grid-container">
+    <!-- Header Row -->
+    <div class="header">A</div>
+    <div class="header">B</div>
+    <div class="header">C</div>
+    <div class="header">D</div>
+    <div class="header">E</div>
+    <div class="header">F</div>
+    <div class="header">G</div>
+    <div class="header">H</div>
+    <div class="header">I</div>
+    <div class="header">J</div>
+    <div class="header">K</div>
+    <div class="header">L</div>
+
+    <!-- Data Cells -->
+    <div class="header">1</div>
+    <div class="cell" contenteditable="true"></div>
+    <div class="cell" contenteditable="true"></div>
+    <div class="cell" contenteditable="true"></div>
+    <div class="cell" contenteditable="true"></div>
+    <div class="cell" contenteditable="true"></div>
+    <div class="cell" contenteditable="true"></div>
+    <div class="cell" contenteditable="true"></div>
+    <div class="cell" contenteditable="true"></div>
+    <div class="cell" contenteditable="true"></div>
+    <div class="cell" contenteditable="true"></div>
+    <div class="cell" contenteditable="true"></div>
+    <div class="cell" contenteditable="true"></div>
+
+    <!-- More Rows -->
+    <!-- Repeat as needed for rows 2-20 -->
+    <!-- Example for Row 2 -->
+    <div class="header">2</div>
+    <div class="cell" contenteditable="true"></div>
+    <div class="cell" contenteditable="true"></div>
+    <div class="cell" contenteditable="true"></div>
+    <div class="cell" contenteditable="true"></div>
+    <div class="cell" contenteditable="true"></div>
+    <div class="cell" contenteditable="true"></div>
+    <div class="cell" contenteditable="true"></div>
+    <div class="cell" contenteditable="true"></div>
+    <div class="cell" contenteditable="true"></div>
+    <div class="cell" contenteditable="true"></div>
+    <div class="cell" contenteditable="true"></div>
+    <div class="cell" contenteditable="true"></div>
+
+    <!-- Continue adding rows as needed -->
+  </div>
+</div>
+
+</body>
+</html>
