@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Click Me Project</title>
+<style>
+    body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background-color: #f0f0f0;
+        font-family: Arial, sans-serif;
+    }
+    #button-container {
+        width: 300px;
+        height: 200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff;
+        border-radius: 20px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+    }
+    #click-button {
+        font-size: 1.5rem;
+        color: #888;
+        border: none;
+        background: none;
+        outline: none;
+        pointer-events: none; /* 버튼 텍스트 클릭 이벤트 방지 */
+    }
+    #result-text {
+        font-size: 2rem;
+        color: #555;
+        display: none;
+    }
+</style>
+</head>
+<body>
+
+<div id="button-container">
+    <span id="click-button">Click me!</span>
+    <div id="result-text">:D</div>
+</div>
+
+<script>
+    const buttonContainer = document.getElementById("button-container");
+    const clickButton = document.getElementById("click-button");
+    const resultText = document.getElementById("result-text");
+
+    // 버튼 클릭 시 동작
+    buttonContainer.addEventListener("click", () => {
+        buttonContainer.style.boxShadow = "none"; // 그림자 제거
+        buttonContainer.style.backgroundColor = "#f0f0f0"; // 배경색 변경
+        buttonContainer.style.cursor = "default"; // 커서 모양 변경
+        clickButton.style.display = "none"; // 버튼 텍스트 숨김
+        resultText.style.display = "block"; // 결과 텍스트 표시
+    });
+</script>
+
+</body>
+</html>
